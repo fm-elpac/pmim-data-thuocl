@@ -28,7 +28,7 @@ jobs:
     - run: cd tmp && zstd -d pmim_sys-0.db.zst
     - run: cd tmp && mv pmim_sys-0.db pmim_sys.db
 
-    - run: deno run -A --unstable-kv ../tool/gen_db_sys_dict.js tmp/pmim_sys.db thuocl/
+    - run: deno run -A --unstable-kv tool/gen_db_sys_dict.js tmp/pmim_sys.db thuocl/
 
     # `pmim_sys.db`
     - uses: actions/upload-artifact@v4
